@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta htttp-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <body> 
+    <div id="container"> 
+    <form action="http://www.baidu.com/baidu" target="_blank"> 
+    <div align="center"> 
+    <input name="tn" type="hidden" value="baidu"> 
+    <input type="text" name="word" size="30"/> 
+    <input type="submit" value="百度搜索"/></div> 
+    </form> 
+    </div> 
+    </body> 
+  <style type="text/css">
+   body{
+    margin: 0px;
+    background-image:url("bg.jpg") ;
+   }
+   .zhezhao{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+   }
+   .tankuang{
+    position: relative;
+    background: #fff;
+    width: 50%;
+    height: 80%;
+    border-radius: 5px;
+    margin: 5% auto;
+   }
+   #header{
+    height: 40px;
+   }
+   #header-right{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+   }
+  </style>
+ 
+
+  <!--样式初始化-->
+  <style>
+      *{
+          margin:0;
+          padding:0;
+          text-decoration: none;
+          list-style: none;
+      }
+      .main{
+        border: 1px solid #000;
+        background: #fff;
+        width: 800px;/*网页宽度*/
+        height: 1276px;
+        margin: auto;/*水平居中*/
+      }
+      .header,.nav,.container,.footer{
+        /*四个作浮动的盒子*/
+        float: left;
+        /*挤爆流量器用的*/
+        width:100%;
+        /*处理内边距问题*/
+        box-sizing: border-box;
+        }
+        .header{
+          background-image:url("fj.jpg") ;
+          padding: 20px;
+          text-align:center;
+        }
+        /*-----------以下为导航栏-------------*/
+        .nav{
+          height: 40px;
+          background:#333;
+          box-shadow:0px 1px 2px #666
+        }
+        *{
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          list-style: none;
+        }
+        .libt{
+          /*让列表横排*/
+          float:left;
+          /*设置宽高*/
+          width: 100px;
+          height: 40px;
+          /*让字水平垂直居中*/
+          text-align: center;
+          line-height: 40px;
+        }
+        /*超链接样式*/
+        .libt a{
+          color: #fff;
+          display: block;
+        }
+        /*鼠标悬停时背景为灰色*/
+        .libt a:hover{
+          background: #ccc;
+        }
+        .droplist{
+          /*背景阴影*/
+          background: #333;
+          box-shadow: 0px 1px 2px #666;
+          /*隐藏1级菜单*/
+          display: none;
+        }
+        .libt:hover .droplist{
+          /*显示1级菜单*/
+          display: block;
+        }
+        .droplist li{
+          /*隔开1级菜单*/
+          border-top: 1px solid #ccc;
+        }
+        /*-----------以上为导航栏-------------*/
+        /*左右宽度设为200*/
+        .lside{
+          border: 5px solid #ccc;
+          width: 150px;
+          height: 986px;
+          float: left;
+        }
+        .rside{
+          border: 1px solid #ccc;
+          width: 200px;
+          float: right;
+        }
+        /*加中间间距*/
+        .content{
+          margin: 0px 205px;
+        }
+        .lside,.rside,.content{
+          padding: 5px;
+          box-sizing: border-box;/*改善内边距问题*/
+        }
+        .footer{
+          padding: 10px;
+          background:#ccc;
+          text-align: center;
+        }
+        /*宽度小于700，变竖屏*/
+        @media screen and(max-width:700px){
+            .lside,.rside,.content{
+              width: 100%;
+              margin: 0px;
+            }
+        }
+        a{
+          text-decoration: none;
+        }
+        .ullist{
+          position: relative;
+          z-index: 0;
+        }
+  </style>  
+</head>
+<body>
+    <div class="main">
+      <div class="header">
+           <h1>主播的DD欢迎你</h1>
+           <img src="dd.jpg" alt="DD" width="80px" height="80px">
+      </div>     
+      <div class="footer">
+        <q>网页版权归:https://xpjlhxhkh.github.io/re01/所有</q>
+        <a href="https://b23.tv/AWJHPLO">友情链接</a>
+      </div>
+      <div class="nav">
+        <ul class="ullist">
+        <il class="libt"><a href="index.html">主页</a></il>
+<li class="libt"><a href="#">凡级</a>
+    <ul class="droplist">
+       <li><a href="#">淬体</a></li>
+       <li><a href="#">练筋</a></li>
+       <li><a href="#">破骨</a></li>
+       <li><a href="#">辟谷淬体</a></li>
+       <li><a href="#">练筋</a></li>
+       <li><a href="#">破骨</a></li>
+       <li><a href="#">辟谷</a></li>
+       <li><a href="#">练心</a></li>
+       <li><a href="#">练肝</a></li>
+       <li><a href="#">练脾</a></li>
+       <li><a href="#">练肺</a></li>
+       <li><a href="#">练肾</a></li>
+       <li><a href="#">练精</a></li>
+       <li><a href="#">开脉</a></li>
+       <li><a href="#">引气</a></li>
+       <li><a href="#">聚气</a></li>
+       <li><a href="#">凝气</a></li>
+       <li><a href="#">化气</a></li>
+       <li><a href="#">练气</a></li>
+       <li><a href="#">筑基</a></li>
+       <li><a href="#">聚丹</a></li>
+       <li><a href="#">散丹</a></li>
+       <li><a href="#">凝丹</a></li>
+       <li><a href="#">金丹</a></li>
+       <li><a href="#">元丹</a></li>
+       <li><a href="#">半婴</a></li>
+       <li><a href="#">凝嬰</a></li>
+       <li><a href="#">散婴</a></li>
+       <li><a href="#">元婴</a></li>
+       <li><a href="#">元神</a></li>
+       <li><a href="#">分神</a></li>
+       <li><a href="#">化神</a></li>
+       <li><a href="#">凝合</a></li>
+       <li><a href="#">散合</a></li>
+       <li><a href="#">合体</a></li>
+       <li><a href="#">合气</a></li>
+       <li><a href="#">合基</a></li>
+       <li><a href="#">合丹</a></li>
+       <li><a href="#">合婴</a></li>
+       <li><a href="#">合神</a></li>
+       <li><a href="#">合灵</a></li>
+       <li><a href="#">合魂</a></li>
+       <li><a href="#">小成</a></li>
+       <li><a href="#">中成</a></li>
+       <li><a href="#">大成</a></li>
+       <li><a href="#">炼虚</a></li>
+       <li><a href="#">洞虚</a></li>
+       <li><a href="#">散虚</a></li>
+       <li><a href="#">返虚</a></li>
+       <li><a href="#">合虚</a></li>
+       <li><a href="#">破虛</a></li>
+       <li><a href="#">虛道</a></li>
+       <li><a href="#">天虚</a></li>
+       <li><a href="#">问虚</a></li>
+       <li><a href="#">问鼎</a></li>
+       <li><a href="#">冥玄</a></li>
+       <li><a href="#">洞玄</a></li>
+       <li><a href="#">虚极</a></li>
+       <li><a href="#">羽化</a></li>
+       <li><a href="#">飞升</a></li>
+       <li><a href="#">地仙</a></li>
+    </ul>
+</li>
+<li class="libt"><a href="#">仙级</a>
+    <ul class="droplist">
+       <li><a href="#">虛仙</a></li>
+       <li><a href="#">亚仙</a></li>
+       <li><a href="#">凡仙</a></li>
+       <li><a href="#">曾仙</a></li>
+       <li><a href="#">人仙</a></li>
+       <li><a href="#">始仙</a></li>
+       <li><a href="#">天仙</a></li>
+       <li><a href="#">真仙</a></li>
+       <li><a href="#">玄仙</a></li>
+       <li><a href="#">元仙</a></li>
+       <li><a href="#">太乙真仙</a></li>
+       <li><a href="#">太玄仙</a></li>
+       <li><a href="#">太乙元仙</a></li>
+       <li><a href="#">大罗真仙</a></li>
+       <li><a href="#">大罗玄仙</a></li>
+       <li><a href="#">大罗元仙</a></li>
+       <li><a href="#">九天真仙</a></li>
+       <li><a href="#">九天玄仙</a></li>
+       <li><a href="#">九天元仙</a></li>
+       <li><a href="#">上仙</a></li>
+       <li><a href="#">玉仙</a></li>
+       <li><a href="#">太仙</a></li>
+       <li><a href="#">金仙</a></li>
+       <li><a href="#">太乙上仙</a></li>
+       <li><a href="#">太乙玉仙</a></li>
+       <li><a href="#">太乙太仙</a></li>
+       <li><a href="#">太乙金仙</a></li>
+       <li><a href="#">大罗上仙</a></li>
+       <li><a href="#">大罗玉仙</a></li>
+       <li><a href="#">大罗太仙</a></li>
+       <li><a href="#">大罗金仙</a></li>
+       <li><a href="#">九天上仙</a></li>
+       <li><a href="#">九天玉仙</a></li>
+       <li><a href="#">九天太仙</a></li>
+       <li><a href="#">仙君</a></li>
+       <li><a href="#">仙王</a></li>
+       <li><a href="#">仙星</a></li>
+       <li><a href="#">仙尊</a></li>
+       <li><a href="#">仙主</a></li>
+       <li><a href="#">仙圣</a></li>
+       <li><a href="#">准帝</a></li>
+       <li><a href="#">仙帝</a></li>
+       <li><a href="#">仙神</a></li>
+       <li><a href="#">九天仙</a></li>
+       <li><a href="#">九天仙王</a></li>
+       <li><a href="#">九天仙尊</a></li>
+       <li><a href="#">九天仙主</a></li>
+       <li><a href="#">九天仙圣</a></li>
+       <li><a href="#">九天仙帝</a></li>
+       <li><a href="#">混元金仙</a></li>
+       <li><a href="#">混元太乙金仙</a></li>
+       <li><a href="#">混元大罗金仙</a></li>
+       <li><a href="#">混沌仙君</a></li>
+       <li><a href="#">混沌仙王</a></li>
+       <li><a href="#">混沌仙尊</a></li>
+       <li><a href="#">混沌仙帝</a></li>
+       <li><a href="#">混沌仙圣</a></li>
+    </ul>
+</li>
+<li class="libt"><a href="#">圣级</a>
+    <ul class="droplist">
+       <li><a href="#">成圣</a></li>
+       <li><a href="#">半圣</a></li>
+       <li><a href="#">准圣</a></li>
+       <li><a href="#">虚圣</a></li>
+       <li><a href="#">亚圣</a></li>
+       <li><a href="#">圣人</a></li>
+       <li><a href="#">玄圣</a></li>
+       <li><a href="#">地圣</a></li>
+       <li><a href="#">天圣</a></li>
+       <li><a href="#">圣灵</a></li>
+       <li><a href="#">圣将</a></li>
+       <li><a href="#">圣君</a></li>
+       <li><a href="#">圣王</a></li>
+       <li><a href="#">圣皇</a></li>
+       <li><a href="#">圣尊</a></li>
+       <li><a href="#">圣主</a></li>
+       <li><a href="#">圣帝</a></li>
+       <li><a href="#">道圣</a></li>
+       <li><a href="#">祖圣</a></li>
+       <li><a href="#">圣之主宰</a></li>
+       <li><a href="#">圣天大道</a></li>
+       <li><a href="#">圣之虚无</a></li>
+       <li><a href="#">圣之本源</a></li>
+       <li><a href="#">圣之起源</a></li>
+       <li><a href="#">圣之道</a></li>
+    </ul>
+</li>
+<li class="libt"><a href="#">神级</a>
+    <ul class="droplist">
+       <li><a href="#">半神</a></li>
+       <li><a href="#">准神</a></li>
+       <li><a href="#">虚神</a></li>
+       <li><a href="#">亚神</a></li>
+       <li><a href="#">凡神</a></li>
+       <li><a href="#">普神</a></li>
+       <li><a href="#">地神</a></li>
+       <li><a href="#">天神</a></li>
+       <li><a href="#">真神</a></li>
+       <li><a href="#">灵神</a></li>
+       <li><a href="#">幻神</a></li>
+       <li><a href="#">影神</a></li>
+       <li><a href="#">神将</a></li>
+       <li><a href="#">神君</a></li>
+       <li><a href="#">神王</a></li>
+       <li><a href="#">神星</a></li>
+       <li><a href="#">神尊</a></li>
+       <li><a href="#">主神</a></li>
+       <li><a href="#">神帝</a></li>
+       <li><a href="#">圣神</a></li>
+       <li><a href="#">祖神</a></li>
+       <li><a href="#">鸿蒙神帝</a></li>
+       <li><a href="#">鸿蒙圣神</a></li>
+       <li><a href="#">鸿蒙祖神</a></li>
+    </ul>
+</li>
+<li class="libt"><a href="#">神袛级</a>
+    <ul class="droplist">
+       <li><a href="#">下位神祇</a></li>
+       <li><a href="#">中位神祇</a></li>
+       <li><a href="#">上位神祗</a></li>
+       <li><a href="#">巔峰神祇</a></li>
+       <li><a href="#">元素神祗</a></li>
+       <li><a href="#">幻影神祗</a></li>
+       <li><a href="#">地煞神衹</a></li>
+       <li><a href="#">天罡神祗</a></li>
+       <li><a href="#">天地神祗</a></li>
+       <li><a href="#">阴之神衹</a></li>
+       <li><a href="#">阳之神衹</a></li>
+       <li><a href="#">阴阳神抵</a></li>
+       <li><a href="#">日之神祗</a></li>
+       <li><a href="#">月之神衹</a></li>
+       <li><a href="#">日月神抵</a></li>
+       <li><a href="#">星辰神祇</a></li>
+       <li><a href="#">周天神祗</a></li>
+       <li><a href="#">法则神祗</a></li>
+       <li><a href="#">天道神衹</a></li>
+       <li><a href="#">道则神祗</a></li>
+       <li><a href="#">混沌神祗</a></li>
+       <li><a href="#">鸿蒙神祗</a></li>
+       <li><a href="#">创世神祇</a></li>
+       <li><a href="#">大道神祗</a></li>
+       <li><a href="#">至高神衹</a></li>
+       <li><a href="#">虚无神祗</a></li>
+       <li><a href="#">归虚神衹</a></li>
+       <li><a href="#">本源神祗</a></li>
+       <li><a href="#">起源神衹</a></li>
+       <li><a href="#">永恒神祇</a></li>
+       <li><a href="#">“道”之神衹</a></li>
+    </ul>
+</li>     
+<li class="libt"><a href="#">宇宙级</a>
+    <ul class="droplist">
+       <li><a href="#">黄阶宇宙</a></li>
+       <li><a href="#">玄阶字宙</a></li>
+       <li><a href="#">地阶字宙</a></li>
+       <li><a href="#">天阶宇宙</a></li>
+       <li><a href="#">黄阶宇宙意识</a></li>
+       <li><a href="#">玄阶字由意识</a></li>
+       <li><a href="#">地阶宇宙意识</a></li>
+       <li><a href="#">天阶宇宙意识</a></li>
+       <li><a href="#">宇宙道祖</a></li>
+       <li><a href="#">黄阶宇宙道祖</a></li>
+       <li><a href="#">玄阶宇宙道祖</a></li>
+       <li><a href="#">地阶宇宙道祖</a></li>
+       <li><a href="#">天阶宇宙道祖</a></li>
+       <li><a href="#">宇宙至尊</a></li>
+       <li><a href="#">黄阶宇宙至尊</a></li>
+       <li><a href="#">玄阶宇宙至尊</a></li>
+       <li><a href="#">地阶宇宙道祖</a></li>
+       <li><a href="#">天阶宇宙道祖</a></li>
+       <li><a href="#">宇宙至尊</a></li>
+       <li><a href="#">黄阶宇宙至尊</a></li>
+       <li><a href="#">玄阶宇宙至尊</a></li>
+       <li><a href="#">地阶宇宙主宰</a></li>
+       <li><a href="#">天阶宇宙主宰</a></li>
+       <li><a href="#">宇宙道</a></li>
+       <li><a href="#">宇宙大道</a></li>
+       <li><a href="#">混沌宇宙</a></li>
+       <li><a href="#">混沌宇宙意识道祖</a></li>
+       <li><a href="#">混沌宇宙至尊</a></li>
+       <li><a href="#">混沌宇宙主宰</a></li>
+       <li><a href="#">混沌宇宙天道</a></li>
+       <li><a href="#">鸿蒙宇宙</a></li>
+       <li><a href="#">鸿蒙宇宙意识</a></li>
+       <li><a href="#">鸿蒙宇宙道祖</a></li>
+       <li><a href="#">鸿蒙宇宙至尊</a></li>
+       <li><a href="#">鸿蒙宇宙主宰</a></li>
+       <li><a href="#">鸿蒙宇宙天道</a></li>
+       <li><a href="#">原始宇宙</a></li>
+       <li><a href="#">原始字宙意识</a></li>
+       <li><a href="#">原始宇宙道祖</a></li>
+       <li><a href="#">原始宇宙主宰</a></li>
+       <li><a href="#">原始字宙天道</a></li>
+       <li><a href="#">永恒宇宙</a></li>
+       <li><a href="#">永恒宇宙意识</a></li>
+       <li><a href="#">永恒宇宙道祖</a></li>
+       <li><a href="#">永恒宇宙至尊</a></li>
+       <li><a href="#">永恒宇宙主宰</a></li>
+       <li><a href="#">永恒宇宙天道</a></li>
+    </ul>
+</li>     
+<li class="libt"><a href="#">至境级</a>
+    <ul class="droplist">
+       <li><a href="#">天道</a></li>
+       <li><a href="#">混沌</a></li>
+       <li><a href="#">鸿蒙</a></li>
+       <li><a href="#">修成正果</a></li>
+       <li><a href="#">主率</a></li>
+       <li><a href="#">至高</a></li>
+       <li><a href="#">大道</a></li>
+       <li><a href="#">虚无</a></li>
+       <li><a href="#">归虚</a></li>
+       <li><a href="#">本源</a></li>
+       <li><a href="#">起源</a></li>
+       <li><a href="#">超脱</a></li>
+       <li><a href="#">无敌</a></li>
+       <li><a href="#">法则境</a></li>
+       <li><a href="#">规则境</a></li>
+    </ul>
+</li>     
