@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta htttp-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DD网</title>
+  <body> 
+    <div id="container"> 
+    <form action="http://www.baidu.com/baidu" target="_blank"> 
+    <div align="center"> 
+    <input name="tn" type="hidden" value="baidu"> 
+    <input type="text" name="word" size="30"/> 
+    <input type="submit" value="百度搜索"/></div> 
+    </form> 
+    </div> 
+    </body> 
+  <style type="text/css">
+   body{
+    margin: 0px;
+    background-image:url("bg.jpg") ;
+   }
+   .zhezhao{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+   }
+   .tankuang{
+    position: relative;
+    background: #fff;
+    width: 50%;
+    height: 80%;
+    border-radius: 5px;
+    margin: 5% auto;
+   }
+   #header{
+    height: 40px;
+   }
+   #header-right{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+   }
+  </style>
+ </head>
+
+  <!--样式初始化-->
+  <style>
+      *{
+          margin:0;
+          padding:0;
+          text-decoration: none;
+          list-style: none;
+      }
+      .main{
+        border: 1px solid #000;
+        background: #fff;
+        width: 1154px;/*网页宽度*/
+        height: 1276px;
+        margin: auto;/*水平居中*/
+      }
+      .header,.nav,.container,.footer{
+        /*四个作浮动的盒子*/
+        float: left;
+        /*挤爆流量器用的*/
+        width:100%;
+        /*处理内边距问题*/
+        box-sizing: border-box;
+        }
+        .header{
+          background-image:url("fj.jpg") ;
+          padding: 20px;
+          text-align:center;
+        }
+        
+        /*-----------以下为导航栏-------------*/
+        .nav{
+
+        height: 40px;
+
+        background: #666;
+
+        /* 给导航加个阴影吧 */
+
+        box-shadow: 0px 1px 2px #666;
+
+        }
+
+       *{
+
+        margin: 0;
+
+        padding: 0;
+
+        /* 去掉内外边距 */
+
+        text-decoration: none;
+
+        list-style: none;
+
+       /* 去掉不必要的样式 */
+
+       }
+
+       .libt{
+
+       /* 让列表横排 */
+
+       float: left;
+
+       /* 设置它的宽高 */
+
+       width: 100px;
+
+       height: 40px;
+
+       /* 让它里面的字水平垂直居中 */
+
+       text-align: center;
+
+       line-height: 40px;
+
+       }
+
+       /* 设置超链接样式 */
+
+      .libt a{
+
+       color: #000;
+
+       /* 把链接改成块显示 */
+
+       display: block;
+
+      } 
+
+      /* 设置鼠标悬停时背景色为灰色 */
+
+      .libt a:hover{
+
+      background: #ccc;
+
+      }
+
+      .droplist{
+
+      /* 我们给它背景色，给它阴影 */
+
+      background: #666;
+
+      box-shadow: 0px 1px 2px #999;
+
+      /* 这里是隐藏 */
+
+      display: none;
+
+      }
+
+      /* 这里是显示 */
+
+      .libt:hover .droplist{
+
+      display: block;
+
+      }
+
+      .droplist li{
+
+      /* 用上边框线把每一项隔开 */
+
+      border-top: 1px solid #ccc;
+
+      height: 40px;
+
+      }
+
+      /* 这里是显示二级下拉 */
+
+      .droplist li:hover .droplist2{
+
+      display: block;
+
+      }
+
+      .droplist2{
+
+      /* 先进行相对定位 */
+
+      position: relative;
+
+      left: 100px;
+
+      top: -40px;
+
+      /* 加背景色 */
+
+      background: #666;
+
+      box-shadow: 0px 1px 2px #999;
+
+      /* 隐藏 */
+
+      display: none;
+
+      } 
+        /*-----------以上为导航栏-------------*/
+        /*左右宽度设为200*/
+        .lside{
+          border: 5px solid #ccc;
+          width: 150px;
+          height: 986px;
+          float: left;
+        }
+        .rside{
+          border: 1px solid #ccc;
+          width: 200px;
+          float: right;
+        }
+        .lside,.rside,.content{
+          padding: 5px;
+          box-sizing: border-box;/*改善内边距问题*/
+        }
+        .footer{
+          padding: 10px;
+          background:#ccc;
+          text-align: center;
+        }
+        /*宽度小于700，变竖屏*/
+        @media screen and(max-width:700px){
+            .lside,.rside,.content{
+              width: 100%;
+              margin: 0px;
+            }
+        }
+        a{
+          text-decoration: none;
+        }
+        .ullist{
+          position: relative;
+          z-index: 0;
+        }  
+        *{
+    
+    margin: 0;
+    
+    padding: 0;
+    
+    list-style: none;
+    
+    text-decoration: none;
+    
+    }
+    
+    #banner{
+    
+    width: 800px;
+    
+    height: 400px;
+    
+    overflow: hidden;
+    
+    border: 2px solid #999;
+    
+    position: relative;
+    
+    }
+    
+    #banner img{
+    
+    width: 800px;
+    
+    height: 400px;
+    
+    }
+    
+    #imglist{
+    
+    width: 4000px;
+    
+    height: 400px;
+    
+    }
+    
+    #imglist li{
+    
+    float: left;
+    
+    }
+    
+    #icolist{
+    
+    position: absolute;
+    
+    right: 10px;
+    
+    bottom: 10px;
+    
+    }
+    
+    #icolist li{
+    
+    float: left;
+    
+    width: 30px;
+    
+    height: 30px;
+    
+    border-radius: 50%;
+    
+    background: #666;
+    
+    color: #fff;
+    
+    margin-left: 5px;
+    
+    text-align: center;
+    
+    line-height: 30px;
+    
+    cursor: pointer;
+    
+    }
+    
+    .prev{
+    
+    background: #666;
+    
+    height: 40px;
+    
+    width: 30px;
+    
+    position: absolute;
+    
+    left: 5px;
+    
+    top: 45%;
+    
+    color: #fff;
+    
+    line-height: 40px;
+    
+    text-align: center;
+    
+    cursor: pointer;
+    
+    }
+    
+    .next{
+    
+    background: #666;
+    
+    height: 40px;
+    
+    width: 30px;
+    
+    position: absolute;
+    
+    right: 5px;
+    
+    top: 45%;
+    
+    color: #fff;
+    
+    line-height: 40px;
+    
+    text-align: center;
+    
+    cursor: pointer;
+    
+    }
+  </style>  
+</head>
+<body>
+    <div class="main">
+      <div class="header">
+           <h1>主播的DD欢迎你</h1>
+           <img src="dd.jpg" alt="DD" width="80px" height="80px">
+      </div>     
+      <div class="nav">
+        <ul class="ullist"style="z-index:100;position:droplist">
+        <il class="libt"><a href="#">主页</a></il>
+        <il class="libt"><a href="xiuxian.html">修仙</a></il>
+        <il class="libt"><a href="#">外部推荐</a>
+          <ul class="droplist">
+            <li>
+              <a href="#">实用工具</a>
+              <ul class="droplist2"style="z-index:100;position:droplist">
+                <li><a href="https://bilibili.iiilab.com/">b站视频解码</a></li>
+                <li><a href="https://t.hk.uy/atQn">VPN下载</a></li>
+                </ul> 
+            </li><li>
+              <a href="#">推荐网站</a>
+              <ul class="droplist2">
+                <li><a href=" https://yandex.com/images/"> Yandex</a></li>
+                <li><a href=" https://datayi.cn/w/EoZAbpeP"> 奶牛快传</a></li>
+                <li><a href=" https://s.gd-share.cn/4eRP">稿定设计</a></li>
+                <li><a href=" http://www.atoolbox.net/"> 一个工具箱</a></li>
+                <li><a href="http://pixiv.net">p站网址</a></li>
+                <li><a href="http://yswawa.com/">原神私服</a></li>
+                </ul> 
+            </li><li>
+              <a href="#">小游戏</a>
+              <ul class="droplist2">
+                <li><a href="https://xingye.me/game/eatkano/index.php">吃掉小鹿乃</a></li>
+                <li><a href="https://arcxingye.github.io/Synthetic/">合成大鹿乃</a></li>
+                <li><a href="https://arcxingye.github.io/zhsl/index.html">召唤神龙</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://h5mota.com/games/51/">50层魔塔</a></li>
+                <li><a href="https://xingye.me/game/lifeRestart/index.html">人生重开器</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://cdn-1258575882.cos.ap-guangzhou.myqcloud.com/gameList/xiangQi/vssvip/web-mobile/index.html">万宁象棋</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://animalchess.youdewan.cn/static/WanNingTaiQiu/web-mobile/">万宁台球</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://cdn-1258575882.cos.ap-guangzhou.myqcloud.com/gameList/wuZiQi/hhfhdf_1.0.37/web-mobile/index.html">万宁五子棋</a></li>
+                <li><a href="https://xingye.me/game/mofang/index.html">3D魔方小游戏</a></li>
+                <li><a href="https://xingye.me/game/xsxn/index.html">像素小鸟</a></li>
+                <li><a href="https://xingye.me/game/qjm/index.html">切积木</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://game.chronodivide.com/">红警</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://bemuse.ninja">bms</a></li>
+                <li><a href="https://xingye.me/game/utu.html?url=https://moonrider.xyz/">节奏光剑</a></li>
+                <li><a href="http://event.mihoyo.com/misoco_new/">miSoCo</a></li>
+                </ul> 
+            </li>
+          </ul>
+        </il>
+         
+      </div>
+      <div class="container;">
+        <!--三个盒子，左中右-->
+        <div class="lside">
+          <h1>DD简介</h1>
+          <img src="DDtx.jpg" alt="DD" width="90px" height="80px">
+          <p>网名:主播的DD</p>
+          <p>b站UID:212532396</p>
+          <p>性别:保密</p>
+          <p>住址:福建</p>
+          <p>个性签名:一个送号区up。
+          得，天天有人说我是骗子，算了，摆了摆了。</p>
+          <p>网站介绍:一个现在还不知道该干什么的网站</p>
+        </div>
+        <div class="rside">
+          <h2>最新视频</h2>
+          <p>（点蓝字跳转）</p>
+          <video src="./1.mp4"controls width="190" height="150"></video>
+          <a href="https://b23.tv/LdZjwRC">原神送号（未送出），12黄被融的号，从三连加关注的评论区抽，要直接买的也可以私我</a>
+          <video src="./2.mp4"controls width="190" height="150"></video>
+          <a href="https://b23.tv/HaoKr38">原神送号（未送出），12黄被融的号，从三连加关注的评论区抽，要直接买的也可以私我</a>
+          <video src="./3.mp4"controls width="190" height="150"></video>
+          <a href="https://b23.tv/A4N2hGd">原神送号,抽奖了抽奖了</a>
+          <video src="./4.mp4"controls width="190" height="150"></video>
+          <a href="https://b23.tv/YXakT2l">《面条上的原神》救命，怎么会这么好笑::>_<::-哔哩哔哩</a>
+        </div>
+        <div class="content">
+          <div id="banner">
+    
+            <ul id="imglist">
+            
+                <li><img src="C:\Users\Administrator\Desktop\cjdd.jpg" alt=""></li>
+                <li><a href="https://www.bilibili.com/video/BV1we4y1y7Zr?share_source=copy_web&vd_source=53fbe3dd2b466aa7dfe58eb2c68630a2"><img src="C:\Users\Administrator\Desktop\kbhgg.jpg" alt=""></li>
+                <li><a href=""></a><img src="C:\Users\Administrator\Desktop\pzgg.jpg" alt=""></li>
+                <li><img src="C:\Users\Administrator\Desktop\zf.jpg" alt=""></li>
+                <li><img src="C:\Users\Administrator\Desktop\cjdd.jpg" alt=""></li>
+            </ul>
+            
+            <ul id="icolist">
+            
+            <li>1</li>
+            
+            <li>2</li>
+            
+            <li>3</li>
+            
+            <li>4</li>
+            
+            </ul>
+            
+            <div class="prev">《</div>
+            
+            <div class="next">》</div>
+            
+            </div>
+            
+            <div id="test"></div>
+            
+            <script>
+            
+            var esico = document.getElementById('icolist').getElementsByTagName('li');
+            
+            var eicolist = document.querySelector('#icolist');
+            
+            var eimglist = document.querySelector('#imglist');
+            
+            var etest = document.querySelector('#test');
+            
+            var eprev = document.querySelector('.prev');
+            
+            var enext = document.querySelector('.next');
+            
+            var left = 0;
+            
+            var timer;
+            
+            esico[2].style.backgroundColor = 'red';
+            
+            run();
+            
+            // alert(Math.floor(3190/800));
+            
+            function run(){
+            
+            if (left <= -3200) {
+            
+            left = 0;
+            
+            }
+            
+            var m = Math.floor(-left/800) ;
+            
+            imglist.style.marginLeft = left + 'px';
+            
+            var n = (left % 800 == 0) ? n = 1200 : n = 6;
+            
+            left -= 10;
+            
+            icochange(m);
+            
+            timer = setTimeout(run,n);
+            
+            }
+            
+            function icochange(m){
+            
+            for (let index = 0; index < esico.length; index++) {
+            
+            esico[index].style.backgroundColor = '';
+            
+            }
+            
+            if (m < esico.length) {
+            
+            esico[m].style.backgroundColor = 'red';
+            
+            }
+            
+            }
+            
+            function imgchange(n){
+            
+            let lt = - (n  * 800)
+            
+            imglist.style.marginLeft = lt + 'px';
+            
+            left = lt;
+            
+            }
+            
+            eprev.onclick = function(){
+            
+            let prevgo = Math.floor(-left/800)-1;
+            
+            if (prevgo == -1) {
+            
+            prevgo =3;
+            
+            }
+            
+            imgchange(prevgo);
+            
+            icochange(prevgo);
+            
+            }
+            
+            enext.onclick = function(){
+            
+            let nextgo = Math.floor(-left/800)+1;
+            
+            if (nextgo == 4) {
+            
+            nextgo =0;
+            
+            }
+            
+            imgchange(nextgo);
+            
+            icochange(nextgo);
+            
+            }
+            
+            eicolist.onclick = function(){
+            
+            var tg = event.target;
+            
+            let ico = tg.innerHTML - 1;
+            
+            imgchange(ico);
+            
+            icochange(ico);
+            
+            }
+            
+            eimglist.onmouseover = function(){
+            
+            clearTimeout(timer);
+            
+            }
+            
+            eimglist.onmouseout = function(){
+            
+            run();
+            
+            }
+            
+            
+            
+            </script>
+            
+        </div>
+      </div>
+      <div class="footer">
+        <q>网页版权归:https://xpjlhxhkh.github.io/re01/所有</q>
+        <a href="https://b23.tv/AWJHPLO">友情链接</a>
+      </div>
+
+
+
+    </div>
+
+  </body></html>
